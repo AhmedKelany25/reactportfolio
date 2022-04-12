@@ -1,0 +1,23 @@
+.nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(30, 192, 160);
+    color: #fff;
+}
+.items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 40px;
+    margin: 0;
+    padding: 18px 0;
+}
+.items a{
+    text-decoration: none;
+    color: #fff;
+}
+.items a:hover{
+    color: rgb(63, 63, 63);
+}

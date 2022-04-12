@@ -1,0 +1,15 @@
+.img{
+    width: 14rem;
+}
+.product_container{
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+}
+.product-details{
+    align-self: end;
+    width: 80%;
+}
+.product-details p{
+    width: 20rem;
+}
