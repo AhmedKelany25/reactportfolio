@@ -4,6 +4,8 @@ import Nav from "./components/Nav";
 import Home from "./views/Home";
 import Shop from "./views/Shop";
 import About from "./views/About";
+import Todo from "./views/todo/Todo";
+
 import Product from "./views/Product";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -19,6 +21,8 @@ function App() {
           <Route path="/products" element={<Shop />} />
           <Route path="/products/:id" element={<Product />} />
           <Route path="/counter" element={<Counter />} />
+          <Route path="/todo" element={<Todo />} />
+
         </Routes>
       </BrowserRouter>
     </>
