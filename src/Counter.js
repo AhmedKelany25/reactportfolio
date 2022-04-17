@@ -12,6 +12,27 @@ const Counter = (props) => {
   const decreaseCounter = () => {
     if (counter != 0) setCounter(counter - 1);
   };
+  
+  const [val, setVal] = useState("");
+  const [items, setItems] = useState(["ahmed","kamel","nader"]);
+
+  const onclickHandler = ()=>{
+    setItems((prev)=>{
+        return [val,...prev]
+    })
+    setVal("")
+    console.log("ahmed")
+  }
+const onItemHandler = (e)=>{
+  if(e.target.hasAttribute("style")){
+      e.target.removeAttribute("style")
+  }else{
+    e.target.style.textDecoration= "line-through"
+
+  }
+  console.log(e.target)
+}
+
   return (
     <div className="App text-center">
       <Card style={{ width: "18rem", margin: "5% auto" }}>
@@ -26,6 +47,22 @@ const Counter = (props) => {
           />
         </Card.Body>
       </Card>
+
+      <div> 
+          <input type="text" value={val} onChange={(e)=>setVal(e.target.value)}></input>
+          <button onClick={onclickHandler}>Add</button>
+          <ul>
+          
+            {items && items.length>0&& items.map((item)=>{
+              return <li onClick={(e)=>onItemHandler(e)}>{item}</li>
+            })}
+            
+          </ul>
+      </div>
+
+
+
+
     </div>
   );
 };
